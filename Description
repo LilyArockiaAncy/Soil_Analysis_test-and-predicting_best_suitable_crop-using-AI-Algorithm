@@ -1,0 +1,66 @@
+Title:
+======
+Soil Analysis test and predicting best suitable crops using AI Algorithm
+
+Description:
+============
+This project is based on agriculture decision support tool that uses machine learning to assess soil quality and suggest suitable crops.
+It loads a dataset, trains a DecisionTreeClassifier to predict soil types based on features like pH,potassium,phosphorous,nitrogen,temperature and rainfall with this inputs it evaluates soil quality based on user-defined parameters. 
+The tool also provides crop recommendations and irrigation advice, along with visualizations of soil parameter distributions. 
+It concludes by reporting the model's accuracy on test data.
+
+Data Preparation:
+=================
+
+1.Data Loading and Preprocessing:
+---------------------------------
+
+The code loads a dataset (agri.csv) that contains various soil and crop parameters.
+It calculates a Profit column based on weighted averages of soil properties if it doesn't already exist.
+
+2.Feature Selection:
+---------------------
+
+The input features include pH, Nitrogen, Phosphorus, Potassium, Temperature, and Rainfall, while the target variable is Soil_Type.
+
+3.Model Training:
+-----------------
+
+The data is split into training and testing sets.
+A DecisionTreeClassifier is trained to predict soil types based on the selected features.
+
+4.Visualization:
+----------------
+
+The script creates bar charts to visualize the distribution of soil parameters against soil types, highlighting median values with red dashed lines.
+
+5.Soil Quality Assessment:
+--------------------------
+
+A function evaluates soil quality based on user-defined thresholds for pH, Nitrogen, Phosphorus, Potassium, Temperature, and Rainfall. It categorizes soil health as "Good," "Fair," or "Poor."
+
+6.Crop Recommendation:
+----------------------
+
+Given a specific soil type and user-defined soil parameters, the tool suggests crops based on a calculated suitability score, which considers how closely the user’s inputs match historical data for various crops.
+
+7.Irrigation Advice:
+---------------------
+
+Based on the assessed soil health, the code provides recommendations on irrigation frequency.
+
+8.User Interaction:
+-------------------
+
+The script prompts users for input regarding soil parameters and soil type, then predicts the soil type, assesses soil quality, lists suitable crops, and suggests irrigation practices.
+The script prompts users for input regarding soil parameters and soil type, then predicts the soil type, assesses soil quality, lists suitable crops, and suggests irrigation practices.
+
+9.Model Evaluation:
+-------------------
+
+Finally, the model’s accuracy is computed and displayed based on the test dataset.
+
+This agricultural decision support tool effectively combines data analysis and machine learning to aid in soil management and crop selection. By assessing soil quality and providing tailored recommendations based on user inputs, it empowers farmers and agronomists to make informed decisions. 
+The integration of visualizations enhances user understanding, while the model's predictive capabilities ensure that crop suggestions align with historical data.
+Overall, this tool can significantly improve agricultural productivity and sustainability.
+Finally, the model’s accuracy is computed and displayed based on the test dataset.
